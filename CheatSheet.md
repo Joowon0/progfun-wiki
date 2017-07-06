@@ -15,9 +15,9 @@ There are certainly a lot of things that can be improved! If you would like to c
 
 ## Evaluation Rules
 
-- Call by value(strict evaluation) : evaluates the function arguments before calling the function
-- Call by name (by-name evaluation): evaluates every time the function is called
-- Call by need (lazy evaluation)   : evaluates the function first, and then evaluates the arguments if need be
+- Call by value(strict evaluation) : evaluates the value once before calling
+- Call by name (by-name evaluation): evaluates every time the value is called
+- Call by need (lazy evaluation)   : evaluates the value when first called, and use the evaluated one if needed
 
 <!-- code -->
 ```scala
