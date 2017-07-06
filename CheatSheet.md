@@ -15,17 +15,18 @@ There are certainly a lot of things that can be improved! If you would like to c
 
 ## Evaluation Rules
 
-- Call by value: evaluates the function arguments before calling the function
-- Call by name: evaluates the function first, and then evaluates the arguments if need be
+- Call by value(strict evaluation) : evaluates the function arguments before calling the function
+- Call by name (by-name evaluation): evaluates every time the function is called
+- Call by need (lazy evaluation)   : evaluates the function first, and then evaluates the arguments if need be
 
 <!-- code -->
 ```scala
-    def example = 2      // evaluated when called
-    val example = 2      // evaluated immediately
-    lazy val example = 2 // evaluated once when needed
+    val example = 2      // strict evaluation
+    def example = 2      // by-name evaluation
+    lazy val example = 2 // lazy evaluation
     
-    def square(x: Double)    // call by value
-    def square(x: => Double) // call by name
+    def square(x: Double)    // funciton: call by name, parameter: call by value
+    def square(x: => Double) // function: call by name, parameter: call by need
     def myFct(bindings: Int*) = { ... } // bindings is a sequence of int, containing a varying # of arguments
 ```
 
