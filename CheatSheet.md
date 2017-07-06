@@ -25,8 +25,8 @@ There are certainly a lot of things that can be improved! If you would like to c
     def example = 2      // by-name evaluation
     lazy val example = 2 // lazy evaluation
     
-    def square(x: Double)    // funciton: call by name, parameter: call by value
-    def square(x: => Double) // function: call by name, parameter: call by need
+    def square(x: Double)    // funciton: by-name evaluation, parameter: call by value
+    def square(x: => Double) // function: by-name evaluation, parameter: call by need
     def myFct(bindings: Int*) = { ... } // bindings is a sequence of int, containing a varying # of arguments
 ```
 
